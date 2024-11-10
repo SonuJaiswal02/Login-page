@@ -18,10 +18,12 @@ from django.contrib import admin # type: ignore
 from django.urls import path # type: ignore
 from signup.views import signaction
 from login.views import loginaction
-from django.http import HttpResponse # type: ignore
+from signup.views import homepage # type: ignore
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('signup/',signaction),
     path('login/',loginaction),
+     path('', homepage, name='homepage'),
 ]

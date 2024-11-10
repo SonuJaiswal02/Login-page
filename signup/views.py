@@ -1,5 +1,7 @@
 from django.shortcuts import render # type: ignore
-import mysql.connector as sql 
+import mysql.connector as sql  # type: ignore
+from django.http import HttpResponse # type: ignore
+
 fn=''
 ln=''
 s=''
@@ -28,3 +30,7 @@ def signaction(request):
         cursor.execute(c)
         m.commit()         
     return render(request,'signup_page.html')
+
+
+def homepage(request):
+    return HttpResponse("Welcome to the Homepage!")

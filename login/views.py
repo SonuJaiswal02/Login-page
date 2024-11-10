@@ -1,5 +1,7 @@
 from django.shortcuts import render # type: ignore
-import mysql.connector as sql
+import mysql.connector as sql # type: ignore
+from django.shortcuts import redirect # type: ignore
+
 em=''
 pwd=''
 # Create your views here.
@@ -24,3 +26,4 @@ def loginaction(request):
             return render(request,"welcome.html")
 
     return render(request,'login_page.html')
+
